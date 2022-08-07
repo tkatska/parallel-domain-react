@@ -1,0 +1,39 @@
+.home {
+  &__loading {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 10px;
+  }
+
+  &__groupName {
+    width: 100%;
+  }
+
+  &__filter_container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-top: 40px;
+
+    p {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__filter {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  @media (min-width: 960px) {
+    &__filter {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      width: auto;
+      min-width: 150px;
+    }
+  }
+}

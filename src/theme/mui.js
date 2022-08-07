@@ -2,6 +2,12 @@ import { createTheme } from "@mui/material/styles";
 
 import colors from "./colors";
 
+const xl = 1920;
+const lg = 1280;
+const md = 960;
+const sm = 600;
+const xs = 0;
+
 const mui = createTheme({
   palette: {
     primary: {
@@ -13,6 +19,15 @@ const mui = createTheme({
     text: {
       primary: colors.textLight,
       secondary: colors.textDark,
+    },
+  },
+  breakpoints: {
+    values: {
+      xl,
+      lg,
+      md,
+      sm,
+      xs,
     },
   },
   typography: {
@@ -91,6 +106,16 @@ const mui = createTheme({
           backgroundColor: colors.secondaryVariant1,
           padding: "8px",
           color: colors.textLight,
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          "&.Mui-selected": {
+            backgroundColor: "rgb(17, 26, 32)",
+            "&.Mui-focusVisible": { background: "rgb(36, 51, 65)" },
+          },
         },
       },
     },
